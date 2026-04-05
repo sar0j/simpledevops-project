@@ -43,8 +43,3 @@ jobs:
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/devopsapp1:$VERSION
           docker push ${{ secrets.DOCKER_USERNAME }}/devopsapp1:latest
-
-      - name: Trigger deployment webhook
-        run: |
-          curl -H "X-Webhook-Token: ${{ secrets.WEBHOOK_SECRET }}" \
-          http://161.33.94.11:9000/hooks/deploy
