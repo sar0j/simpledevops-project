@@ -18,7 +18,7 @@ def get_db():
 def home():
     env = os.environ.get("ENV", "unknown")
     app_name = os.environ.get("APP_NAME", "unknown")
-    return f"App: {app_name} | ENV: {env} | GitOps with ArgoCD🚀"
+    return f"App: {app_name} | ENV: {env} | GitOps with ArgoCD🚀🚀"
 
 @app.route("/users")
 def get_users():
